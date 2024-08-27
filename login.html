@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("images/background.jpg"); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center   
+ center;
+        }
+    </style>
+  <meta charset="UTF-8">
+  <title>User Login</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/login style.css">
+</head>
+
+<div class="container">
+    <div class="screen">
+        <div class="screen__content">
+            <!-- Login Form -->
+            <form class="login" action="/api/auth/login" method="POST">
+                <div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input type="text" name="email" class="login__input" placeholder="User name / Email" required>
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-lock"></i>
+                    <input type="password" name="password" class="login__input" placeholder="Password" required>
+                </div>
+                <button class="button login__submit">
+                    <span class="button__text">Log In Now</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button>                
+            </form>
+            
+            <div class="social-login">
+                <h3>Log in via</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/accounts/login/?hl=en" class="social-login__icon fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzExMDAxODc3LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D" class="social-login__icon fab fa-facebook"></a>
+                    <a href="https://twitter.com/i/flow/login" class="social-login__icon fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>      
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+          </div>  
+    </div>
+    
+</div>
+<script src="js/login.js"></script> <!-- Correct path to login.js -->
+</body>
+</html>

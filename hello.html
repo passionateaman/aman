@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Landing Page</title>
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="login-page">
+    <!-- Content of the login page will be loaded here -->
+</div>
+
+<!-- Landing Page (initially hidden) -->
+<div id="landing-page" style="display: none;">
+    <!-- Content of the landing page will be loaded here -->
+</div>
+
+<!-- JavaScript to load content into login and landing pages -->
+<script>
+    function loadLoginPage() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById('login-page').innerHTML = xhr.responseText;
+                } else {
+                    console.error('Error loading login page:', xhr.statusText);
+                }
+            }
+        };
+        xhr.open('GET', 'login.html', true);
+        xhr.send();
+    }
+
+    function loadLandingPage() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById('landing-page').innerHTML = xhr.responseText;
+                    document.getElementById('login-page').style.display = 'none';
+                    document.getElementById('landing-page').style.display = 'block';
+                } else {
+                    console.error('Error loading landing page:', xhr.statusText);
+                }
+            }
+        };
+        xhr.open('GET', 'book.html', true);
+        xhr.send();
+    }
+
+    // Load login page initially
+    loadLoginPage();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Landing Page</title>
+    <!-- Add your CSS stylesheets if any -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Include the login page using an iframe -->
+<iframe src="login.html" width="100%" height="600px" frameborder="0"></iframe>
+
+<!-- Landing Page -->
+<div id="landing-page" style="display: none;">
+    <!-- Your landing page content here -->
+    <h1>Landing Page</h1>
+    <p>Welcome to the landing page!</p>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<!-- JavaScript to handle login/logout -->
+<script>
+    // Function to handle logout
+    function logout() {
+        // Implement logout functionality here if needed
+        document.getElementById('landing-page').style.display = 'none';
+        // Reload the iframe to show the login page again
+        document.querySelector('iframe').contentWindow.location.reload();
+    }
+</script>
+
+</body>
+</html>
